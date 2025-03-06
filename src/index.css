@@ -100,6 +100,11 @@
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
+  
+  /* Adding smooth transitions for all interactive elements */
+  a, button, input, select, textarea {
+    @apply transition-all duration-200;
+  }
 }
 
 @layer utilities {
@@ -114,4 +119,32 @@
   .neo-blur {
     @apply backdrop-blur-2xl bg-black/40 border border-white/10;
   }
+  
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-[shadow,transform] duration-300 hover:shadow-[0_0_15px_rgba(0,120,255,0.3)] hover:scale-[1.01];
+  }
+}
+
+/* Enhanced animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }

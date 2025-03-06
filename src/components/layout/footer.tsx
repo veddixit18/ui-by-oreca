@@ -97,9 +97,19 @@ export function Footer() {
         </div>
         
         <div className="mt-12 pt-6 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Nova Tech. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start">
+            <a 
+              href="https://oreca.space" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-xs text-muted-foreground/70 hover:text-muted-foreground transition-colors animate-appear opacity-0 [animation-delay:100ms]"
+            >
+              by oreca.space
+            </a>
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Nova Tech. All rights reserved.
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link
               to="/privacy"
