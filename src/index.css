@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,9 +95,14 @@
     @apply border-border;
   }
 
+  html, body {
+    @apply overflow-x-hidden; /* Fix for horizontal scrolling */
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    width: 100%; /* Ensure body doesn't exceed viewport width */
   }
   
   /* Adding smooth transitions for all interactive elements */

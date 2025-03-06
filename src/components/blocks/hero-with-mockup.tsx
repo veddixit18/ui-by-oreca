@@ -44,13 +44,13 @@ export function HeroWithMockup({
   return (
     <section
       className={cn(
-        "relative bg-background text-foreground",
+        "relative bg-background text-foreground w-full",
         "py-12 px-4 md:py-24 lg:py-32",
         "overflow-hidden",
         className,
       )}
     >
-      <div className="relative mx-auto max-w-[1280px] flex flex-col gap-12 lg:gap-24">
+      <div className="relative mx-auto w-full max-w-[1280px] flex flex-col gap-12 lg:gap-24">
         <div className="relative z-10 flex flex-col items-center gap-6 pt-8 md:pt-16 text-center lg:gap-12">
           {/* Heading */}
           <h1
